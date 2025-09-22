@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--btn-main);
+  border: 0.5px var(--border);
+  border-radius: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.button_cheked {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--btn-cheked);
+  border: 0.5px var(--border);
+  border-radius: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}

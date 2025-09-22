@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+}
+
+.card {
+  display: flex;
+  width: 200px;
+  background-color: var(--book-card-bg);
+  border: 2px var(--border);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.card_button {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  gap: 5px;
+}
