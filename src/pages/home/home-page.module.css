@@ -5,13 +5,12 @@
 }
 
 .header {
-  /* grid-column: 1 / span 4;
-  grid-row: 1 / 2; */
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 main {
@@ -20,5 +19,10 @@ main {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+.result_message {
+  font-size: xx-large;
+  font-weight: bold;
 }
 
