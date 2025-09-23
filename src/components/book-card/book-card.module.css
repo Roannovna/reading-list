@@ -1,8 +1,5 @@
 .container {
   position: relative;
-}
-
-.card {
   display: flex;
   width: 200px;
   background-color: var(--book-card-bg);
@@ -11,6 +8,10 @@
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
+}
+
+.card {
+  width: 200px;
 }
 
 .card_button {

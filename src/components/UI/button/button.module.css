@@ -13,6 +13,13 @@
   background-position: center;
   overflow: hidden;
 }
+button:hover {
+  border-color: var(--bg-color);
+  border-width: 1px;
+  box-shadow:
+    0.5px 0.5px 1px var(--accent-color),
+    -0.5px -0.5px 1px var(--accent-color);
+}
 
 .button_cheked {
   display: flex;
