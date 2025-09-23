@@ -6,7 +6,7 @@
   width: 40px;
   height: 40px;
   background-color: var(--btn-main);
-  border: 0.5px var(--border);
+  border: 0.5px solid var(--border-color);
   border-radius: 15%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -14,8 +14,7 @@
   overflow: hidden;
 }
 button:hover {
-  border-color: var(--bg-color);
-  border-width: 1px;
+  border: 1px solid var(--bg-color);
   box-shadow:
     0.5px 0.5px 1px var(--accent-color),
     -0.5px -0.5px 1px var(--accent-color);
@@ -29,7 +28,7 @@ button:hover {
   width: 40px;
   height: 40px;
   background-color: var(--btn-cheked);
-  border: 0.5px var(--border);
+  border-width: 0.5px solid var(--border-color);
   border-radius: 15%;
   background-size: contain;
   background-repeat: no-repeat;

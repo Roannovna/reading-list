@@ -2,13 +2,12 @@ input {
   font-family: "Junicode", serif;
   font-style: italic;
   font-size: 30px;
-  color: var(--border);
+  color: var(--border-color);
   width: 300px;
   height: 60px;
   padding: 0 25px;
   border-radius: 20px;
-  border-color: var(--border);
-  border-width: 2px;
+  border: 2px solid var(--border-color);
   background-color: var(--input-bg-color);
   background-image: url("../../assets/icons/search.svg");
   background-repeat: no-repeat;

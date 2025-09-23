@@ -3,7 +3,7 @@
   display: flex;
   width: 200px;
   background-color: var(--book-card-bg);
-  border: 2px var(--border);
+  border: 2px solid var(--border-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
