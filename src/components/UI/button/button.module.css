@@ -13,7 +13,7 @@
   background-position: center;
   overflow: hidden;
 }
-button:hover {
+.button:hover {
   border: 1px solid var(--bg-color);
   box-shadow:
     0.5px 0.5px 1px var(--accent-color),

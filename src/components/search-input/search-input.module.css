@@ -4,13 +4,13 @@ input {
   font-size: 30px;
   color: var(--border-color);
   width: 300px;
-  height: 60px;
+  height: 40px;
   padding: 0 25px;
   border-radius: 20px;
   border: 2px solid var(--border-color);
   background-color: var(--input-bg-color);
   background-image: url("../../assets/icons/search.svg");
   background-repeat: no-repeat;
-  background-size: 50px 50px;
-  background-position: 230px center;
+  background-size: 35px 35px;
+  background-position: 240px center;
 }

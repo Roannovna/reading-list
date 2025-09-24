@@ -1,18 +1,29 @@
 import type { ReactNode } from "react";
 import styles from "./button.module.css";
+import classNames from "classnames";
 
 interface ButtonProps {
-  isCheked: boolean;
+  isCheked?: boolean;
   children: ReactNode;
   onClick?: () => void;
+  classes?: string;
 }
 
-export function Button({ isCheked = false, children, onClick }: ButtonProps) {
+export function Button({
+  isCheked = false,
+  children,
+  onClick,
+  classes,
+}: ButtonProps) {
+  const wrapperClasses = classNames(styles.button, {
+    [styles.button_cheked]: isCheked,
+    [classes || ""]: classes,
+  });
+
+  console.log(wrapperClasses);
+
   return (
-    <button
-      onClick={onClick}
-      className={isCheked ? styles.button_cheked : styles.button}
-    >
+    <button onClick={onClick} className={wrapperClasses}>
       {children}
     </button>
   );

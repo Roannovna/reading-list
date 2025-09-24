@@ -26,3 +26,12 @@ main {
   font-weight: bold;
 }
 
+.header_container {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+}

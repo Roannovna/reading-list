@@ -6,6 +6,8 @@ import { SearchInput } from "../../components/search-input/search-input";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useMemo } from "react";
 import { useState } from "react";
+import { AddBookButton } from "../../components/add-book-button/add-book-button";
+import { Modal } from "../../components/UI/modal/modal";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,16 +19,26 @@ function App() {
     );
   }, [debouncedSearch]);
 
+  const [isOpenAddBook, setIsOpenAddBook] = useState(false);
+
   return (
     <div className={styles.body}>
       <header className={styles.header}>
         <Header />
-        <div>
+        <div className={styles.header_container}>
           <SearchInput
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+          <AddBookButton onClick={() => setIsOpenAddBook(true)} />
         </div>
+        {isOpenAddBook && (
+          <Modal
+            onClose={() => {
+              setIsOpenAddBook(false);
+            }}
+          />
+        )}
       </header>
       <main>
         {books.length ? (
