@@ -4,7 +4,7 @@ import { BookCard } from "../../components/book-card/book-card";
 import { BOOKS } from "../../components/book-details-button/book.data";
 import { SearchInput } from "../../components/search-input/search-input";
 import { useDebounce } from "../../hooks/useDebounce";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useState } from "react";
 import { AddBookButton } from "../../components/add-book-button/add-book-button";
 import { Modal } from "../../components/UI/modal/modal";
@@ -20,6 +20,8 @@ function App() {
   }, [debouncedSearch]);
 
   const [isOpenAddBook, setIsOpenAddBook] = useState(false);
+  const openAddBook = useCallback(() => setIsOpenAddBook(true), []);
+  const closeAddBook = useCallback(() => setIsOpenAddBook(false), []);
 
   return (
     <div className={styles.body}>
@@ -30,15 +32,9 @@ function App() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <AddBookButton onClick={() => setIsOpenAddBook(true)} />
+          <AddBookButton onClick={openAddBook} />
         </div>
-        {isOpenAddBook && (
-          <Modal
-            onClose={() => {
-              setIsOpenAddBook(false);
-            }}
-          />
-        )}
+        {isOpenAddBook && <Modal onClose={closeAddBook} />}
       </header>
       <main>
         {books.length ? (
