@@ -1,20 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../UI/button/button";
 
 interface BookDetailsButtonProps {
-  onClick: () => void;
+  id: string;
 }
+export function BookDetailsButton({ id }: BookDetailsButtonProps) {
+  const navigation = useNavigate();
 
-export function BookDetailsButton({ onClick }: BookDetailsButtonProps) {
   return (
-    <Button onClick={onClick}>
-      {
-        <img
-          src="/src/assets/icons/book-details-button.svg"
-          width={30}
-          height={30}
-          alt="Подробнее"
-        />
-      }
+    <Button onClick={() => navigation(`/book/${id}`)}>
+      <img
+        src="/src/assets/icons/book-details.svg"
+        width={30}
+        height={30}
+        alt="Подробнее о книге"
+      />
     </Button>
   );
 }

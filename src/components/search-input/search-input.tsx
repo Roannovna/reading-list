@@ -9,7 +9,7 @@ export function SearchInput(props: SearchInputProps) {
   return (
     <div>
       <input
-        type="search"
+        // type="search"
         value={props.value}
         onChange={props.onChange}
         placeholder="Search..."

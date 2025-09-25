@@ -9,7 +9,7 @@ import { useState } from "react";
 import { AddBookButton } from "../../components/add-book-button/add-book-button";
 import { Modal } from "../../components/UI/modal/modal";
 
-function App() {
+function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const debouncedSearch = useDebounce(searchTerm);
 
@@ -39,7 +39,7 @@ function App() {
       <main>
         {books.length ? (
           books.map((book) => (
-            <BookCard key={book.title + book.id} image={book.cover} />
+            <BookCard key={book.title + book.id} book={book} />
           ))
         ) : (
           <p className={styles.result_message}>Book is not found🕯️</p>
@@ -49,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

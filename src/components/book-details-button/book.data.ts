@@ -1,4 +1,6 @@
-export const BOOKS = [
+import type { Book } from "../../interfaces";
+
+export const BOOKS: Book[] = [
   {
     id: 1,
     cover: "/src/assets/book-cover/sluzhba-dostavki-knig.jpg",
