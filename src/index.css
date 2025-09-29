@@ -41,6 +41,7 @@ body {
   background-color: var(--bg-color);
   background-image: url("./assets/background/background.png");
   background-size: contain;
+  color: var(--main-color);
 
 }
 

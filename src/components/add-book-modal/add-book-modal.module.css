@@ -61,7 +61,6 @@
   align-items: flex-start;
   gap: 10px;
   font-family: "Junicode", serif;
-  color: var(--main-color);
 }
 
 .form input, .form textarea {
@@ -81,11 +80,13 @@
 .title {
   font-size: xx-large;
   font-weight: bold;
+  color: var(--main-color);
 }
 
 .author {
   font-size: x-large;
   font-weight: normal;
+  color: var(--main-color);
 }
 
 .description {
@@ -93,6 +94,7 @@
   font-weight: normal;
   resize: none;
   height: 100%;
+  color: var(--main-color);
 }
 
 .save_button {
