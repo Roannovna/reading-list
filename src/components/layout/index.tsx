@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { Header } from "../UI/header/header";
+import { Header } from "../UI/header/index";
 import { useMemo } from "react";
 import styles from "./layout.module.css";
 

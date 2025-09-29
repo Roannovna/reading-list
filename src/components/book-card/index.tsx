@@ -1,6 +1,6 @@
-import { StatusButton } from "../status-button/status-button";
+import { StatusButton } from "../status-button/index";
 import styles from "./book-card.module.css";
-import { BookDetailsButton } from "../book-details-button/book-details-button";
+import { BookDetailsButton } from "../book-details-button/index";
 import type { Book } from "../../interfaces";
 import classNames from "classnames";
 

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { BOOKS } from "../../components/book-details-button/book.data";
-import { BookCard } from "../../components/book-card/book-card";
+import { BookCard } from "../../components/book-card/index";
 import styles from "./book-page.module.css";
 
 function BookPage() {

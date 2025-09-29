@@ -1,6 +1,6 @@
 import styles from "./modal.module.css";
 import { createPortal } from "react-dom";
-import { CloseButton } from "../close-button/close-button";
+import { CloseButton } from "../close-button/index";
 import { useEffect } from "react";
 
 interface ModalProps {

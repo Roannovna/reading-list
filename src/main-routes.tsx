@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import HomePage from "./pages/home/home-page";
+import HomePage from "./pages/home/index";
 import BookPage from "./pages/book/index";
-import { Layout } from "./components/layout/layout";
+import { Layout } from "./components/layout/index";
 
 export function MainRoutes() {
   return (

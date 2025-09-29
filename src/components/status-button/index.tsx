@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../UI/button/button";
+import { Button } from "../UI/button/index";
 
 export function StatusButton() {
   const [isReaded, setIsReaded] = useState(false);

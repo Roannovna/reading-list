@@ -1,13 +1,13 @@
 import styles from "./home-page.module.css";
-import { Header } from "../../components/UI/header/header";
-import { BookCard } from "../../components/book-card/book-card";
+import { Header } from "../../components/UI/header/index";
+import { BookCard } from "../../components/book-card/index";
 import { BOOKS } from "../../components/book-details-button/book.data";
-import { SearchInput } from "../../components/search-input/search-input";
+import { SearchInput } from "../../components/search-input/index";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useCallback, useMemo } from "react";
 import { useState } from "react";
-import { AddBookButton } from "../../components/add-book-button/add-book-button";
-import { Modal } from "../../components/UI/modal/modal";
+import { AddBookButton } from "../../components/add-book-button/index";
+import { Modal } from "../../components/UI/modal/index";
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "../UI/button/button";
+import { Button } from "../UI/button/index";
 
 interface BookDetailsButtonProps {
   id: string;

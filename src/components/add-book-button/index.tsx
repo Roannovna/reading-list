@@ -1,4 +1,4 @@
-import { Button } from "../UI/button/button";
+import { Button } from "../UI/button/index";
 import styles from "./add-book-button.module.css";
 
 interface AddBookButtonProps {
