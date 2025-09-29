@@ -20,8 +20,6 @@ export function Button({
     [classes || ""]: classes,
   });
 
-  console.log(wrapperClasses);
-
   return (
     <button onClick={onClick} className={wrapperClasses}>
       {children}
