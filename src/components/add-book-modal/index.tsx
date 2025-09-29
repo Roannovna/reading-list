@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Modal } from "../UI/modal";
 import styles from "./add-book-modal.module.css";
 
 export function AddBookModal({ onClose }: { onClose: () => void }) {
+  const [cover, setCover] = useState<string>();
+
   return (
     <div>
       <Modal onClose={onClose}>
@@ -11,9 +14,14 @@ export function AddBookModal({ onClose }: { onClose: () => void }) {
             <div className={styles.cover_details}>
               <img
                 // src="https://avatars.mds.yandex.net/get-mpic/6269810/2a000001918edb4798987b35aa08770e4a56/orig"
+                src={cover}
                 className={styles.cover}
               />
-              <input type="url" placeholder="add cover URL" />
+              <input
+                type="url"
+                placeholder="add cover URL"
+                onChange={(e) => setCover(e.target.value)}
+              />
             </div>
             <div className={styles.details}>
               <input type="text" placeholder="Title" className={styles.title} />
