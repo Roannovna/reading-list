@@ -1,0 +1,109 @@
+.modal_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px 35px;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_title {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 50px;
+}
+
+.cover_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.cover {
+  width: 200px;
+  height: 315px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--form-btn-bg);
+  border: 2px solid var(--border-color);
+  color: var(--main-color);
+  font-size: large;
+  font-weight: normal;
+}
+
+.cover_details input {
+  height: 35px;
+  width: 100%;
+  padding: 0;
+}
+
+.details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: "Junicode", serif;
+  color: var(--main-color);
+}
+
+.form input, .form textarea {
+  font-family: "Junicode", serif;
+  font-style: normal;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 20px;
+  border: 2px solid var(--border-color);
+  background-color: var(--form-input-bg);
+}
+
+.form input::placeholder, .form textarea::placeholder {
+  color: var(--main-color);
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.author {
+  font-size: x-large;
+  font-weight: normal;
+}
+
+.description {
+  font-size: large;
+  font-weight: normal;
+  resize: none;
+  height: 100%;
+}
+
+.save_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  font-size: 35px;
+  border-radius: 20px;
+  background-color: var(--form-btn-bg);
+  border: 2px solid var(--border-color);
+  color: var(--bg-color);
+}

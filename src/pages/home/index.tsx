@@ -7,7 +7,7 @@ import { useDebounce } from "../../hooks/useDebounce";
 import { useCallback, useMemo } from "react";
 import { useState } from "react";
 import { AddBookButton } from "../../components/add-book-button/index";
-import { Modal } from "../../components/UI/modal/index";
+import { AddBookModal } from "../../components/add-book-modal/index";
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,7 +34,7 @@ function HomePage() {
           />
           <AddBookButton onClick={openAddBook} />
         </div>
-        {isOpenAddBook && <Modal onClose={closeAddBook} />}
+        {isOpenAddBook && <AddBookModal onClose={closeAddBook} />}
       </header>
       <main>
         {books.length ? (

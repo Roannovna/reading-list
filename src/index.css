@@ -7,6 +7,8 @@
   --book-card-bg: rgba(180, 133, 84, 0.5);
   --btn-main: rgba(143, 99, 52, 0.8);
   --btn-cheked: rgba(72, 70, 37, 0.8);
+  --form-input-bg: rgba(72, 70, 37, 0.85);
+  --form-btn-bg: rgba(139, 58, 35, 0.85);
 }
 
 @font-face {
