@@ -1,9 +1,9 @@
-import type { Book } from "../../interfaces";
+import type { Book } from "../interfaces";
 
 export const BOOKS: Book[] = [
   {
     id: 1,
-    cover: "/src/assets/book-cover/sluzhba-dostavki-knig.jpg",
+    cover: "https://cdn1.ozone.ru/s3/multimedia-1-i/7538294718.jpg",
     title: "Служба доставки книг",
     author: "Карстен Хенн",
     description: 
@@ -11,7 +11,7 @@ export const BOOKS: Book[] = [
   },
   {
     id: 2,
-    cover: "/src/assets/book-cover/shokolad.jpg",
+    cover: "https://avatars.mds.yandex.net/get-mpic/6269810/2a000001918edb4798987b35aa08770e4a56/orig",
     title: "Шоколад",
     author: "Джоанн Харрис",
     description: 
@@ -19,7 +19,7 @@ export const BOOKS: Book[] = [
   },
   {
     id: 3,
-    cover: "/src/assets/book-cover/ledentsovie-tyfelki.jpg",
+    cover: "https://static10.labirint.ru/books/1007082/cover.jpg",
     title: "Леденцовые туфельки",
     author: "Джоанн Харрис",
     description: 

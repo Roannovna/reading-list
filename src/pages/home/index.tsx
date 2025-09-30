@@ -1,23 +1,30 @@
 import styles from "./home-page.module.css";
 import { Header } from "../../components/UI/header/index";
 import { BookCard } from "../../components/book-card/index";
-import { BOOKS } from "../../components/book-details-button/book.data";
+// import { BOOKS } from "../../store/book.data";
 import { SearchInput } from "../../components/search-input/index";
-import { useDebounce } from "../../hooks/useDebounce";
-import { useCallback, useMemo } from "react";
+// import { useDebounce } from "../../hooks/useDebounce";
+import { useCallback, useEffect, useMemo } from "react";
 import { useState } from "react";
 import { AddBookButton } from "../../components/add-book-button/index";
 import { AddBookModal } from "../../components/add-book-modal/index";
+import { useGetBooks } from "../../hooks/useGetBooks";
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const debouncedSearch = useDebounce(searchTerm);
+  // const debouncedSearch = useDebounce(searchTerm);
 
-  const books = useMemo(() => {
-    return BOOKS.filter((book) =>
-      book.title.toLowerCase().includes(debouncedSearch.toLowerCase())
-    );
-  }, [debouncedSearch]);
+  const { books, getAllBooks } = useGetBooks();
+
+  useEffect(() => {
+    getAllBooks();
+  }, [getAllBooks]);
+
+  // const books = useMemo(() => {
+  //   return BOOKS.filter((book) =>
+  //     book.title.toLowerCase().includes(debouncedSearch.toLowerCase())
+  //   );
+  // }, [debouncedSearch]);
 
   const [isOpenAddBook, setIsOpenAddBook] = useState(false);
   const openAddBook = useCallback(() => setIsOpenAddBook(true), []);

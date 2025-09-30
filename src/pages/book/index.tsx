@@ -1,21 +1,22 @@
+import styles from "./book-page.module.css";
 import { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { BOOKS } from "../../components/book-details-button/book.data";
 import { BookCard } from "../../components/book-card/index";
-import styles from "./book-page.module.css";
+import { useGetBookDetails } from "../../hooks/useGetBookDetails";
 
 function BookPage() {
   const { id } = useParams();
 
-  const book = useMemo(() => {
-    return BOOKS.find((book) => book.id === Number(id));
-  }, [id]);
+  const { book, getBookById, loading } = useGetBookDetails();
+
+  useMemo(() => getBookById(Number(id)), [id]);
 
   return (
     <div className={styles.body}>
       <div>
         {book && <BookCard book={book} classes={styles.cover} />}
-        {!book && <p>Книга не найдена</p>}
+        {!book && <p>Книга не найдена🕯️</p>}
+        {loading && <p>Loading...</p>}
       </div>
       <div className={styles.details}>
         <p className={styles.title}>{book?.title}</p>
