@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../UI/button/index";
+import type { Book } from "../../interfaces";
 
 interface BookDetailsButtonProps {
-  id: string;
+  id: Book["id"];
 }
 export function BookDetailsButton({ id }: BookDetailsButtonProps) {
   const navigation = useNavigate();

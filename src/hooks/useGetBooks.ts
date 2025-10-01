@@ -13,5 +13,16 @@ export const useGetBooks = () => {
     setBooks(filtered);
   }, []);
 
-  return { books, getAllBooks };
+  const updateStatus = useCallback((id: number, status: boolean) => {
+    const books = localStorage.getItem(booksKey);
+    const parsedBooks: Book[] = books ? JSON.parse(books) : [];
+    
+    const index = parsedBooks.indexOf(parsedBooks.find((book: Book) => book.id === id)!);
+    parsedBooks[index].isReaded = status;
+    localStorage.setItem(booksKey, JSON.stringify(parsedBooks));
+
+    getAllBooks("");
+  }, []);
+
+  return { books, getAllBooks, updateStatus};
 };

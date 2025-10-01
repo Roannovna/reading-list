@@ -16,7 +16,7 @@ function HomePage() {
 
   const debouncedSearch = useDebounce(searchTerm);
 
-  const { books, getAllBooks } = useGetBooks();
+  const { books, getAllBooks, updateStatus } = useGetBooks();
 
   useEffect(() => {
     getAllBooks(debouncedSearch);
@@ -41,7 +41,11 @@ function HomePage() {
       <main>
         {books.length ? (
           books.map((book) => (
-            <BookCard key={book.title + book.id} book={book} />
+            <BookCard
+              key={book.title + book.id}
+              book={book}
+              onUpdateStatus={updateStatus}
+            />
           ))
         ) : (
           <p className={styles.result_message}>Book is not found🕯️</p>

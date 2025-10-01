@@ -1,11 +1,19 @@
-import { useState } from "react";
+import type { Book } from "../../interfaces";
 import { Button } from "../UI/button/index";
 
-export function StatusButton() {
-  const [isReaded, setIsReaded] = useState(false);
+interface StatusButtonProps {
+  id: Book["id"];
+  isReaded: boolean;
+  onUpdateStatus: (id: number, status: boolean) => void;
+}
 
+export function StatusButton({
+  id,
+  isReaded,
+  onUpdateStatus,
+}: StatusButtonProps) {
   return (
-    <Button onClick={() => setIsReaded(!isReaded)} isCheked={isReaded}>
+    <Button onClick={() => onUpdateStatus(id, !isReaded)} isCheked={isReaded}>
       {isReaded ? (
         <img
           src="/src/assets/icons/readed-book.svg"
